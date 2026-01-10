@@ -17,7 +17,7 @@ SRC_URI[sha256sum] = "${XSCT_CHECKSUM}"
 
 inherit check_xsct_enabled native
 
-S = "${WORKDIR}/Vitis"
+S = "${UNPACKDIR}/Vitis"
 B = "${S}"
 
 SYSROOT_DIRS_NATIVE += "${STAGING_DIR_NATIVE}/Vitis/${PV}"
@@ -56,7 +56,7 @@ python do_unpack() {
                 local_uri = uri
 
             fetcher = bb.fetch2.Fetch([local_uri], d)
-            fetcher.unpack(d.getVar('WORKDIR'))
+            fetcher.unpack(d.getVar('UNPACKDIR'))
     except bb.fetch2.BBFetchException as e:
         bb.fatal("Bitbake Fetcher Error: " + repr(e))
 }

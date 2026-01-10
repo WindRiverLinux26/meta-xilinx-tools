@@ -4,7 +4,7 @@ PV = '${XILINX_XSCT_VERSION}+git'
 PE = '1'
 
 LICENSE = "GPL-2.0-or-later"
-LIC_FILES_CHKSUM = "file://xadcps/data/xadcps.mdd;md5=d2baf2c4690cd90d3c2c2efabfde5fd4"
+LIC_FILES_CHKSUM = "file://${UNPACKDIR}/${BP}/xadcps/data/xadcps.mdd;md5=d2baf2c4690cd90d3c2c2efabfde5fd4"
 
 # This file is shared with uboot-device-tree
 require device-tree.inc
@@ -13,7 +13,6 @@ inherit xsctdt xsctyaml
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-S = "${WORKDIR}/git"
 B = "${WORKDIR}/${BPN}-build"
 
 XSCTH_BUILD_CONFIG = ""

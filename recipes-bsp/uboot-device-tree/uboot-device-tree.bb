@@ -13,8 +13,6 @@ inherit devicetree xsctdt xsctyaml
 
 PROVIDES = "virtual/uboot-dtb"
 
-S = "${WORKDIR}/git"
-
 # Version should match device-tree recipe
 PV = '${XILINX_XSCT_VERSION}+git'
 PE = '1'
